@@ -16,6 +16,7 @@ function CalcularPrecio ()
  	var precioSinDescuento ;
  	var descuento ;
  	var precioFinal ;
+ 	var ingesosBrutos;
  	
  	cantidad = document.getElementById('Cantidad').value ;
  	marca = document.getElementById('Marca').value ;
@@ -31,32 +32,63 @@ function CalcularPrecio ()
  		case 1:
  		case 2:
  			break;
- 		case 3 :	
-			switch(marca)
-		{
-			case "ArgentinaLuz":
-			descuento = 0.85;
-			case "FelipeLamparas":
-			descuento = 0.90;
-			default:
-			descuento = 0.95 ;
-				break;
-			 }
-			case 4:
-			switch(marca)
-			{
-			case "ArgentinaLuz":
-				descuento = 0.75
-			case "FelipeLamparas":
-				descuento = 0.75	
-			}
+ 		case 3:
+ 			switch(marca)
+ 			{
+ 				case "ArgentinaLuz":
+ 					descuento = 0.85 ;
+ 					break;
+ 				case "FelipeLamparas":
+ 					descuento = 0.90 ;
+ 					break;
+ 				default:
+ 					descuento = 0.95 ;
+ 					break;
+ 			}
+ 				break ;	  
+ 		case 4:
+ 			switch(marca)
+ 			{
+ 				case "ArgentinaLuz":
+ 				case "FelipeLamparas":
+ 					descuento = 0.75;
+ 					break;
+ 				default:
+ 					descuento = 0.80;
+ 					break;
+ 			}
+ 			break ;
+ 		case 5:
+ 			switch(marca)
+ 			{
+ 				case "ArgentinaLuz":
+ 					descuento = 0.60;
+ 					break;
+ 				default:
+ 					descuento = 0.70;
+ 					break;
+ 			}
+ 			break;
+ 		default:
+ 			descuento = 0.50 ;
+ 			break;			
 
-	}		
+ 			
+ 	}
+			
  	    
 
  	   precioFinal = precioSinDescuento * descuento ;
-
- 	   document.getElementById('precioDescuento').value = precioFinal
+ 	   ingesosBrutos = precioFinal * 0.10
+ 	   if(precioFinal > 120)
+ 	   {
+ 	   	document.getElementById('precioDescuento').value = precioFinal + ingesosBrutos ;
+ 	   	alert("Usted pagó "+ingesosBrutos+" de IBB") ;
+ 	   }
+ 	   else
+ 	   {
+ 	   	document.getElementById('precioDescuento').value = precioFinal ;
+ 	   }
 
  
 
@@ -125,4 +157,5 @@ function CalcularPrecio ()
 
 
 */
-}
+
+ }
