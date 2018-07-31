@@ -18,9 +18,8 @@ function mostrar()
 	  {
 	  	suma = numero + positivo ;
 	  	positivo = positivo + numero ;
-	  }
-	  else 
-	  	if (numero < negativo)
+	  } 
+	  if (numero < negativo)
 	  	{
 	  		multiplicaciòn = numero * negativo ;
 	  		negativo = negativo + numero ;
