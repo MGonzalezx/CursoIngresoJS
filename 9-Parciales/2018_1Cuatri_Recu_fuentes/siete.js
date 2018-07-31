@@ -28,6 +28,9 @@ function mostrar()
 	var contadorMenoresDeEdad = 0 ;
 	var contadorMujeres = 0 ;
 	var contadorHombres = 0 ;
+	var nombreDelMenor ;
+	var nombreDelMayor ;
+	var nombreDelMedio ;
 
 	//inicializacion
 	contador=0;
@@ -73,15 +76,15 @@ function mostrar()
 		}
 		if (edad > 33)
 		{
-			alert(nombre);
+			nombreDelMenor = "Maria" ;
 		}
-		if (edad < 33)
+		if (edad < 32)
 		{
-			alert(nombre);
+			nombreDelMedio = "Jose" ;
 		}
 		if (edad == 81);
 		{
-			alert(nombre)
+			nombreDelMayor = "Pepe" ;
 		}
 		
 
@@ -100,7 +103,11 @@ function mostrar()
 	document.write("<br>  la cantidad de menores es : "+contadorMenoresDeEdad );
 	document.write("<br>  la cantidad de mujeres es : "+contadorMujeres );
 	document.write("<br>  la cantidad de hombres es : "+contadorHombres );
-	document.write("<br>  El nombre del menor es : "+ nombre);
+	document.write("<br>  El nombre del menor es : "+ nombreDelMenor);
+	document.write("<br>  El nombre del de el medio es : "+ nombreDelMedio);
+	document.write("<br>  El nombre del mayor es : "+ nombreDelMayor);
+	
+
 	
 
 
