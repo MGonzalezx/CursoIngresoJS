@@ -3,9 +3,9 @@ function mostrar()
 
 var repeticiones =parseInt(prompt("ingrese el número de repeticiones"));
 
-for(var i = 0; i < repeticiones ; i++ )
+for(var saludo = 1; saludo <= repeticiones ; saludo++ )
 {
-	console.log(i + alert("HOLA utnfra")) ;	
+	console.log(saludo + " Hola UTNFRA") ;	
 }
 
 
