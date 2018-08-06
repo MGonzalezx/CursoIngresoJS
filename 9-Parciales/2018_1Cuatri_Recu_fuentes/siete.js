@@ -28,9 +28,11 @@ function mostrar()
 	var contadorMenoresDeEdad = 0 ;
 	var contadorMujeres = 0 ;
 	var contadorHombres = 0 ;
+	var edadMenor = 1000 ;
+	var edadHombreMenor = 81 ;
 	var nombreDelMenor ;
-	var nombreDelMayor ;
 	var nombreDelMedio ;
+	var nombreDelMayor ;
 
 	//inicializacion
 	contador=0;
@@ -74,17 +76,21 @@ function mostrar()
 		{
 			contadorHombres++ ;
 		}
-		if (edad > 33)
+		if (edad < edadMenor)
 		{
-			nombreDelMenor = "Maria" ;
+			edadMenor = edad ;
+			nombreDelMenor = nombre ;
+
 		}
-		if (edad < 32)
+		else if (edad < edadHombreMenor && sexo == "m")
 		{
-			nombreDelMedio = "Jose" ;
+			edadHombreMenor = edad ;
+			nombreDelMedio = nombre ;
 		}
-		if (edad == 81);
+		else if (edad == edadMenor);
 		{
-			nombreDelMayor = "Pepe" ;
+			edadMenor = edad ;
+			nombreDelMayor = nombre ;
 		}
 		
 
